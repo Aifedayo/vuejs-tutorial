@@ -44,6 +44,11 @@
         <!-- V-for for list rendering -->
         <div class="container">
             <h3>List of Users:</h3>
+            <ul>
+                <li v-for="user in users">
+                    {{ user }}
+                </li>
+            </ul>
         </div>
       </div>
     <script src="https://unpkg.com/vue@3"></script>

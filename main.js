@@ -10,7 +10,28 @@ const { createApp } = Vue
         product: 'sunglasses',
         quantity: 150,
         sale: true,
-        users : ['khadijah', 'zainab', 'hafsah', 'aishah']
+        users : [
+          {
+            id: 567,
+            name: "Khadijah",
+            position: "One"
+          },
+          {
+            id: 568,
+            name: "Aishah",
+            position: "Two"
+          },
+          {
+            id: 569,
+            name: "Zainab",
+            position: "Three"
+          },
+          {
+            id: 570,
+            name: "Hafsah",
+            position: "Four"
+          }
+        ]
       }
     },
 
