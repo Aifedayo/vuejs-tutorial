@@ -15,6 +15,8 @@ const { createApp } = Vue
         color: "green",
         text: "",
         checked: true,
+        comment: null,
+        comments: [],
         users : [
           {
             id: 567,
