@@ -43,12 +43,11 @@
 
         <!-- V-for for list rendering -->
         <div class="container">
-            <h3>List of Users:</h3>
-            <ul>
-                <li v-for="user in users">
-                    {{ user }}
-                </li>
-            </ul>
+            <div v-for="user in users"
+                :key="user.id">
+                <p><strong>User: {{ user.name }}</strong></p>
+                <p><strong>Position: {{ user.position }}</strong></p>
+            </div>
         </div>
       </div>
     <script src="https://unpkg.com/vue@3"></script>
