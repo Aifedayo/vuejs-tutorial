@@ -12,6 +12,9 @@ const { createApp } = Vue
         sale: true,
         first_name: 'John',
         last_name: 'Doe',
+        color: "green",
+        text: "",
+        checked: true,
         users : [
           {
             id: 567,
