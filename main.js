@@ -81,6 +81,11 @@ const { createApp } = Vue
           let newComment = this.comment;
           this.comments.push(newComment);
           this.comment = null;
+
+          if (this.error) {
+            this.error = null;
+          }
+          
         } else {
           this.error = 'The comment field cannot be empty';
         }
