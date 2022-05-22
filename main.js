@@ -10,6 +10,8 @@ const { createApp } = Vue
         product: 'sunglasses',
         quantity: 150,
         sale: true,
+        first_name: 'John',
+        last_name: 'Doe',
         users : [
           {
             id: 567,
@@ -35,6 +37,22 @@ const { createApp } = Vue
       }
     },
 
+    computed: {
+      getRandomComputed() {
+        return Math.random();
+      },
+      
+      getFullName() {
+        return `${ this.first_name } ${ this.last_name }`;
+      },
+
+      reversedFullName() {
+        let first = this.first_name.split("").reverse().join("");
+        let last = this.last_name.split("").reverse().join("");
+        return `${ first } ${ last }`
+      }
+    },
+
     methods: {
       incrementCount() {
         this.count++;
@@ -46,6 +64,10 @@ const { createApp } = Vue
 
       overTheBox() {
         console.log('Over the green box');
-      }
+      },
+
+      getRandomNumber() {
+        return Math.random();
+      },
     }
   }).mount('#app')

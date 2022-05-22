@@ -44,10 +44,25 @@
         <!-- V-for for list rendering -->
         <div class="container">
             <div v-for="user in users"
-                :key="user.id">
+                :key="user.id"
+            >
                 <p><strong>User: {{ user.name }}</strong></p>
+                <hr>
                 <p><strong>Position: {{ user.position }}</strong></p>
             </div>
+        </div>
+
+        <!-- Computed properties -->
+        <div class="container">
+            <p>Method 1: {{ getRandomNumber() }}</p>
+            <p>Method 2: {{ getRandomNumber() }}</p>
+            <hr>
+            <p>Computed 1: {{ getRandomComputed }}</p>
+            <p>Computed 2: {{ getRandomComputed }}</p>
+
+            <hr>
+            <p>Full Name: {{ getFullName }}</p>
+            <p>Reversed Full Name: {{ reversedFullName }}</p>
         </div>
       </div>
     <script src="https://unpkg.com/vue@3"></script>
