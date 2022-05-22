@@ -93,21 +93,32 @@
         </div>
 
         <!-- form with user input -->
-        <div class="row justify-content-center mt-3">
-            <form>
-                <div class="form-group">
-                    <label for="comment">
-                        Publish a comment!
-                    </label>
-                    <textarea v-model="comment" 
-                        cols="80" rows="5"
-                        id="comment-text"
-                        class="form-control"
-                    >
-                    </textarea>
+        <div class="container">
+            <div class="row justify-content-center mt-3">
+                <form @submit.prevent="onSubmit">
+                    <div class="form-group">
+                        <label for="comment">
+                            Publish a comment!
+                        </label>
+                        <textarea v-model="comment" 
+                            cols="80" rows="5"
+                            id="comment-text"
+                            class="form-control"
+                        >
+                        </textarea>
+                        <button class="btn btn-danger" type="submit">
+                            Publish
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-10">
+                    <div class="card" v-for="comment in comments">
+                        {{ comment }}
+                    </div>
 
                 </div>
-            </form>
         </div>
       </div>
     <script src="https://unpkg.com/vue@3"></script>

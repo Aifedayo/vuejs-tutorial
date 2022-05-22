@@ -17,6 +17,7 @@ const { createApp } = Vue
         checked: true,
         comment: null,
         comments: [],
+        error: null,
         users : [
           {
             id: 567,
@@ -74,5 +75,15 @@ const { createApp } = Vue
       getRandomNumber() {
         return Math.random();
       },
+
+      onSubmit() {
+        if (this.comment ) {
+          let newComment = this.comment;
+          this.comments.push(newComment);
+          this.comment = null;
+        } else {
+          this.error = 'The comment field cannot be empty';
+        }
+      }
     }
   }).mount('#app')
